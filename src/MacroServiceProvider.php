@@ -11,6 +11,7 @@ class MacroServiceProvider extends ServiceProvider
 		$this->publishes([
 			__DIR__ . '/../resources/css/laravel-macros.css' => base_path('public/css/laravel-macros.css'),
 			__DIR__ . '/../resources/js/laravel-macros.js' => base_path('public/css/laravel-macros.js'),
+			__DIR__ . '/../resources/img/dutch_license_plate.png' => base_path('public/img/dutch_license_plate.png'),
 		]);
 
 		// Require macro files
@@ -27,4 +28,3 @@ class MacroServiceProvider extends ServiceProvider
 
 	}
 }
-

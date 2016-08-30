@@ -15,14 +15,14 @@ Include the package in your application
 ---------------------------------------
 
 ``` bash
-$ composer require lucasvdh/laravelmacros:5.*
+composer require lucasvdh/laravelmacros:5.*
 ```
 Or add a requirement to your project's composer.json
 
 ``` javascript
-"require": {
-    "lucasvdh/laravelmacros": "5.*"
-},
+    "require": {
+        "lucasvdh/laravelmacros": "5.*"
+    },
 ```
 
 Register the service provider
@@ -31,8 +31,34 @@ Register the service provider
 Edit the `config/app.php` file. Append the following to the `providers` array:
 
 ``` php
-'Lucasvdh\LaravelMacros\MacroServiceProvider',
+  'providers' => [
+    // ...
+    Lucasvdh\LaravelMacros\MacroServiceProvider::class,
+    // ...
+  ],
 ```
+
+If you didn't have the `laravelcollective/html` package yet, be sure to add that service provider too:
+
+``` php
+  'providers' => [
+    // ...
+    Collective\Html\HtmlServiceProvider::class,
+    // ...
+  ],
+```
+
+And register the aliases:
+
+``` php
+ 'aliases' => [
+    // ...
+      'Form' => Collective\Html\FormFacade::class,
+      'Html' => Collective\Html\HtmlFacade::class,
+    // ...
+  ],
+```
+
 
 Publish and include the styles and scripts
 -----------------------------
@@ -78,12 +104,12 @@ Date picker
 Chosen select
 
 ``` blade
-{!! Form::chosen('field_name', $is_checked, 'This is the checkbox text', 'value'['class' => 'some-class']) !!}
+{!! Form::chosen('field_name', $default, $list, ['class' => 'some-class']) !!}
 ```
 
 
 Material checkbox
 
 ``` blade
-{!! Form::materialCheckbox('field_name', $is_checked, 'This is the checkbox text', 'value'['class' => 'some-class']) !!}
+{!! Form::materialCheckbox('field_name', $checked, 'This is the checkbox text', 'value', ['class' => 'some-class']) !!}
 ```
