@@ -9,7 +9,9 @@ Getting started
 ----------
 1. [Include the package in your application](#include-the-package-in-your-application)
 2. [Register the service provider](#register-the-service-provider)
-3. [Publish the styles and scripts](#publish-the-styles-and-scripts)
+3. [Publish and include the styles and scripts](#publish-and-include-the-styles-and-scripts)
+
+View the [examples](#examples).
 
 Include the package in your application
 ---------------------------------------
@@ -61,7 +63,7 @@ And register the aliases:
 
 
 Publish and include the styles and scripts
------------------------------
+------------------------------------------
 
 ``` bash
 $ php artisan vendor:publish
