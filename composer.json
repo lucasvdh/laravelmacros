@@ -1,0 +1,24 @@
+{
+	"name": "lucasvdh/laravelmacros",
+	"version": "1.0",
+	"license": "MIT",
+	"description": "A useful set of HTML and Form macros with css and js made for bootstrap",
+	"keywords": ["laravel", "set", "macro", "macros", "html", "form", "styling", "css", "javascript", "js"],
+	"homepage": "https://github.com/lucasvdh/laravelmacros",
+	"authors": [{
+		"name": "Lucas van der Have",
+		"email": "lucas@rapide.nl",
+		"homepage": "http://rapide.nl/",
+		"role": "Developer"
+	}],
+	"require": {
+		"php": ">=5.3.0",
+		"laravel/framework": "5.*",
+		"laravelcollective/html": "5.*"
+	},
+	"autoload": {
+		"psr-4": {
+			"Lucasvdh\\LaravelMacros\\": "src/"
+		}
+	}
+}
