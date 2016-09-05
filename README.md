@@ -1,20 +1,17 @@
-Laravel 5 Macros
-==============
+# Laravel 5 Macros
 
 A useful set of HTML and Form macros with corresponding CSS and Javascript resources. Made for Bootstrap.
 
 Check out the 4.0 branch for Laravel 4 support.
 
-Getting started
-----------
+## Getting started
 1. [Include the package in your application](#include-the-package-in-your-application)
 2. [Register the service provider](#register-the-service-provider)
 3. [Publish and include the styles and scripts](#publish-and-include-the-styles-and-scripts)
 
 View the [examples](#examples).
 
-Include the package in your application
----------------------------------------
+## Include the package in your application
 
 ``` bash
 composer require lucasvdh/laravelmacros:5.*
@@ -27,8 +24,7 @@ Or add a requirement to your project's composer.json
     },
 ```
 
-Register the service provider
-------------------
+## Register the service provider
 
 Edit the `config/app.php` file. Append the following to the `providers` array:
 
@@ -55,15 +51,14 @@ And register the aliases:
 ``` php
  'aliases' => [
     // ...
-      'Form' => Collective\Html\FormFacade::class,
-      'Html' => Collective\Html\HtmlFacade::class,
+    'Form' => Collective\Html\FormFacade::class,
+    'Html' => Collective\Html\HtmlFacade::class,
     // ...
   ],
 ```
 
 
-Publish and include the styles and scripts
-------------------------------------------
+## Publish and include the styles and scripts
 
 ``` bash
 $ php artisan vendor:publish
@@ -71,7 +66,11 @@ $ php artisan vendor:publish
 
 The CSS and Javascript files will be published to `public/css` and `public/js`. 
 
-Make sure to include these in the view where you want to use the macros:
+Make sure to include these in the view where you want to use the macros. You have two choices for including the styles and scripts.
+  
+### Include all
+
+Either you include all the plugins as a minified file.
 
 ``` html
 <html>
@@ -87,15 +86,36 @@ Make sure to include these in the view where you want to use the macros:
 </html>
 ```
 
-That's it
-=========
+### Include specific plugins
+
+Or you include specific plugins.
+
+``` html
+<html>
+    <head>
+        ...
+        <link href="/css/chosen.css" rel="stylesheet">
+        <link href="/css/tags-input.css" rel="stylesheet">
+    </head>
+    <body>
+        ...
+        <!-- Include Javascript at the end of body to improve page load speed -->
+        <script src="/js/chosen.jquery.min.js" type="text/javascript"></script>
+        <script src="/js/tags-input.js" type="text/javascript"></script>
+        
+        <!-- IMPORTANT this file is required for the plugins to function -->
+        <script src="/js/laravel-macros-app.js" type="text/javascript"></script>
+    </body>
+</html>
+```
+
+# That's it
 
 You can now use the macros and all should work. Customization of the CSS and Javascript files should be straight forward.
 
 Below, a few examples are given how to use these macros:
 
-Examples
---------
+## Examples
 
 Date picker
 
