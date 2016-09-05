@@ -1,6 +1,6 @@
 {
 	"name": "lucasvdh/laravelmacros",
-	"version": "1.0",
+	"version": "5.0",
 	"license": "MIT",
 	"description": "A useful set of HTML and Form macros with css and js made for bootstrap",
 	"keywords": ["laravel", "set", "macro", "macros", "html", "form", "styling", "css", "javascript", "js"],
