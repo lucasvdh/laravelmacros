@@ -10,17 +10,17 @@ class MacroServiceProvider extends ServiceProvider
 	{
 		// Register styles to publish
 		$this->publishes([
-			__DIR__ . '/../resources/css/' => public_path('/css'),
+			__DIR__ . '/../resources/assets/css/' => public_path('/css'),
 		], 'styles');
 
 		// Register scripts to publish
 		$this->publishes([
-			__DIR__ . '/../resources/js/' => public_path('/js'),
+			__DIR__ . '/../resources/assets/js/' => public_path('/js'),
 		], 'scripts');
 
 		// Register images to publish
 		$this->publishes([
-			__DIR__ . '/../resources/img/' => public_path('/img'),
+			__DIR__ . '/../resources/assets/img/' => public_path('/img'),
 		], 'images');
 
 		// Require macro files
