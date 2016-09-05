@@ -9,9 +9,9 @@ class MacroServiceProvider extends ServiceProvider
 	public function boot()
 	{
 		$this->publishes([
-			__DIR__ . '/../resources/css/laravel-macros.css' => base_path('public/css/laravel-macros.css'),
-			__DIR__ . '/../resources/js/laravel-macros.js' => base_path('public/css/laravel-macros.js'),
-			__DIR__ . '/../resources/img/dutch_license_plate.png' => base_path('public/img/dutch_license_plate.png'),
+			__DIR__ . '/../resources/css/' => public_path('css/'),
+			__DIR__ . '/../resources/js/' => public_path('js/'),
+			__DIR__ . '/../resources/img/' => public_path('img/'),
 		]);
 
 		// Require macro files
