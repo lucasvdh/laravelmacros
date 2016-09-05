@@ -61,7 +61,15 @@ And register the aliases:
 ## Publish and include the styles and scripts
 
 ``` bash
-$ php artisan vendor:publish
+$ php artisan vendor:publish --provider="Lucasvdh\LaravelMacros\MacroServiceProvider"
+```
+
+#### Publishing a specific resource
+
+``` bash
+$ php artisan vendor:publish --provider="Lucasvdh\LaravelMacros\MacroServiceProvider" --tag="scripts"
+$ php artisan vendor:publish --provider="Lucasvdh\LaravelMacros\MacroServiceProvider" --tag="styles"
+$ php artisan vendor:publish --provider="Lucasvdh\LaravelMacros\MacroServiceProvider" --tag="images"
 ```
 
 The CSS and Javascript files will be published to `public/css` and `public/js`. 
