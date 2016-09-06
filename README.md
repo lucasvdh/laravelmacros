@@ -153,7 +153,7 @@ Material checkbox
 
 ![material-checkbox](http://download-manager.nl/lucasvdh/laravelmacros/material-checkbox.png "Material checkbox")
 
-![material-checkbox-checked](http://downlod-manager.nl/lucasvdh/laravelmacros/material-checkbox-checked.png "Material checkbox checked")
+![material-checkbox-checked](http://download-manager.nl/lucasvdh/laravelmacros/material-checkbox-checked.png "Material checkbox checked")
 
 Material radio
 
