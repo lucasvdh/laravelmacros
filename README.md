@@ -19,9 +19,9 @@ composer require lucasvdh/laravelmacros:5.*
 Or add a requirement to your project's composer.json
 
 ``` javascript
-    "require": {
-        "lucasvdh/laravelmacros": "5.*"
-    },
+  "require": {
+    "lucasvdh/laravelmacros": "5.*"
+  },
 ```
 
 ## Register the service provider
@@ -36,7 +36,7 @@ Edit the `config/app.php` file. Append the following to the `providers` array:
   ],
 ```
 
-If you didn't have the `laravelcollective/html` package yet, be sure to add that service provider too:
+If you don't have the `laravelcollective/html` package yet, be sure to add that service provider too:
 
 ``` php
   'providers' => [
@@ -49,7 +49,7 @@ If you didn't have the `laravelcollective/html` package yet, be sure to add that
 And register the aliases:
 
 ``` php
- 'aliases' => [
+  'aliases' => [
     // ...
     'Form' => Collective\Html\FormFacade::class,
     'Html' => Collective\Html\HtmlFacade::class,
@@ -82,15 +82,15 @@ Either you include all the plugins as a minified file.
 
 ``` html
 <html>
-    <head>
-        ...
-        <link href="/css/laravel-macros.css" rel="stylesheet">
-    </head>
-    <body>
-        ...
-        <!-- Include Javascript at the end of body to improve page load speed -->
-        <script src="/js/laravel-macros.js" type="text/javascript"></script>
-    </body>
+  <head>
+    ...
+    <link href="/css/laravel-macros.css" rel="stylesheet">
+  </head>
+  <body>
+    ...
+    <!-- Include Javascript at the end of body to improve page load speed -->
+    <script src="/js/laravel-macros.js" type="text/javascript"></script>
+  </body>
 </html>
 ```
 
@@ -100,20 +100,20 @@ Or you include specific plugins.
 
 ``` html
 <html>
-    <head>
-        ...
-        <link href="/css/chosen.css" rel="stylesheet">
-        <link href="/css/tags-input.css" rel="stylesheet">
-    </head>
-    <body>
-        ...
-        <!-- Include Javascript at the end of body to improve page load speed -->
-        <script src="/js/chosen.jquery.min.js" type="text/javascript"></script>
-        <script src="/js/tags-input.js" type="text/javascript"></script>
-        
-        <!-- IMPORTANT this file is required for the plugins to function -->
-        <script src="/js/laravel-macros-app.js" type="text/javascript"></script>
-    </body>
+  <head>
+    ...
+    <link href="/css/chosen.css" rel="stylesheet">
+    <link href="/css/tags-input.css" rel="stylesheet">
+  </head>
+  <body>
+    ...
+    <!-- Include Javascript at the end of body to improve page load speed -->
+    <script src="/js/chosen.jquery.min.js" type="text/javascript"></script>
+    <script src="/js/tags-input.js" type="text/javascript"></script>
+    
+    <!-- IMPORTANT this file is required for the plugins to function -->
+    <script src="/js/laravel-macros-app.js" type="text/javascript"></script>
+  </body>
 </html>
 ```
 
@@ -125,7 +125,7 @@ Below, a few examples are given how to use these macros:
 
 ## Examples
 
-Date picker
+### Date picker
 
 ``` blade
 {!! Form::datepicker('field_name', $default, ['class' => 'some-class']) !!}
@@ -135,7 +135,7 @@ Date picker
 
 ![datepicker-extended](http://download-manager.nl/lucasvdh/laravelmacros/datepicker-extended.png "Date picker extended")
 
-Chosen select
+### Chosen select
 
 ``` blade
 {!! Form::chosen('field_name', $default, $list, ['class' => 'some-class']) !!}
@@ -145,7 +145,7 @@ Chosen select
 
 ![chosen-extended](http://download-manager.nl/lucasvdh/laravelmacros/chosen-select-extended.png "Chosen select extended")
 
-Material checkbox
+### Material checkbox
 
 ``` blade
 {!! Form::materialCheckbox('field_name', $checked, 'This is the checkbox text', 'value', ['class' => 'some-class']) !!}
@@ -155,7 +155,7 @@ Material checkbox
 
 ![material-checkbox-checked](http://download-manager.nl/lucasvdh/laravelmacros/material-checkbox-checked.png "Material checkbox checked")
 
-Material radio
+### Material radio
 
 ``` blade
 {!! Form::materialRadio('field_name', $default, $options = ['value' => 'label'], ['class' => 'some-class']) !!}

@@ -30,6 +30,7 @@ elixir(function(mix) {
     'jquery.inputmask.min.js',
     'chosen.jquery.min.js',
     'tags-input.js',
+    'bootstrap-datepicker.js',
     'laravel-macros-app.js'
   ], 'resources/assets/js/laravel-macros.js');
 });
