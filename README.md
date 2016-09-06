@@ -131,15 +131,34 @@ Date picker
 {!! Form::datepicker('field_name', $default, ['class' => 'some-class']) !!}
 ```
 
+![datepicker](http://download-manager.nl/lucasvdh/laravelmacros/datepicker.png "Date picker")
+
+![datepicker-extended](http://download-manager.nl/lucasvdh/laravelmacros/datepicker-extended.png "Date picker extended")
+
 Chosen select
 
 ``` blade
 {!! Form::chosen('field_name', $default, $list, ['class' => 'some-class']) !!}
 ```
 
+![chosen](http://download-manager.nl/lucasvdh/laravelmacros/chosen-select.png "Chosen select")
+
+![chosen-extended](http://download-manager.nl/lucasvdh/laravelmacros/chosen-select-extended.png "Chosen select extended")
 
 Material checkbox
 
 ``` blade
 {!! Form::materialCheckbox('field_name', $checked, 'This is the checkbox text', 'value', ['class' => 'some-class']) !!}
 ```
+
+![material-checkbox](http://download-manager.nl/lucasvdh/laravelmacros/material-checkbox.png "Material checkbox")
+
+![material-checkbox-checked](http://downlod-manager.nl/lucasvdh/laravelmacros/material-checkbox-checked.png "Material checkbox checked")
+
+Material radio
+
+``` blade
+{!! Form::materialRadio('field_name', $default, $options = ['value' => 'label'], ['class' => 'some-class']) !!}
+```
+
+![material-radio](http://download-manager.nl/lucasvdh/laravelmacros/material-radio.png "Material radio")
