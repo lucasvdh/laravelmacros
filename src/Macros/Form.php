@@ -146,7 +146,7 @@ Form::macro('amount', function ($label, $default = NULL, $params = []) {
 
 	$input = '<div class="input-group"> ';
 
-	$input .= '<span class="input-group-addon"><i class="fa fa-euro"></i></span>';
+	$input .= '<span class="input-group-addon"><i class="mdi mdi-currency-eur"></i></span>';
 
 	$input .= '<input name="' . $label . '" id="' . $label . '" type="text" ';
 
@@ -324,7 +324,7 @@ Form::macro('form_group', function ($errors, $name) {
 
 Form::macro('form_errors', function ($errors, $name) {
 	if (isset($errors) && $errors != null && $errors->first($name) != null) {
-		return "<span class='fa fa-times form-control-feedback' data-toggle='tooltip' data-placement='left' title='" . $errors->first($name) . "'></span>";
+		return "<span class='mdi mdi-alert-box form-control-feedback' data-toggle='tooltip' data-placement='left' title='" . $errors->first($name) . "'></span>";
 	}
 });
 
