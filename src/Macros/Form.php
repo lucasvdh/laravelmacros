@@ -78,7 +78,7 @@ Form::macro('iban', function ($label, $default = NULL, $params = array()) {
 	// $default = '';
 	// }
 
-	$input = '<div class="input-group iban"> ';
+	$input = '<div class="input-group iban validate"> ';
 
 	$input .= '<input name="' . $label . '" id="' . $label . '" type="text" ';
 
