@@ -208,7 +208,7 @@ Html::macro('scoreToStars', function ($value) {
 });
 
 Html::macro('amount', function ($value, $currency = '&euro;') {
-	return $currency . ' ' . number_format(floatval($value), 2, ',', '.');
+	return '<span class="amount">' . $currency . ' ' . number_format(floatval($value), 2, ',', '.') . '</span>';
 });
 
 Html::macro('percentage', function ($value) {
@@ -217,7 +217,7 @@ Html::macro('percentage', function ($value) {
 
 	$formatted = number_format($value, 2) . ' %';
 
-	return $formatted;
+	return '<span class="percentage">' . $formatted . '</span>';
 
 });
 
