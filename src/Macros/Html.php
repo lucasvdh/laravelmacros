@@ -207,6 +207,15 @@ Html::macro('scoreToStars', function ($value) {
 	return $output;
 });
 
+Html::macro('phone_number', function ($value, $number = NULL, $display_name = NULL) {
+	$output = '<span class="phone_number" data-number="' . isset($number) ? $number : preg_replace('/\D/', '', $value) . '"';
+	if(isset($display_name)) {
+		$output .= 'data-display-name="' . $display_name . '"';
+	}
+	$output .= '>' . $value . '</span>';
+	return $output;
+});
+
 Html::macro('amount', function ($value, $currency = '&euro;') {
 	return '<span class="amount">' . $currency . ' ' . number_format(floatval($value), 2, ',', '.') . '</span>';
 });
