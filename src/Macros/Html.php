@@ -208,7 +208,7 @@ Html::macro('scoreToStars', function ($value) {
 });
 
 Html::macro('phone_number', function ($value, $number = NULL, $display_name = NULL) {
-	$output = '<span class="phone_number" data-number="' . isset($number) ? $number : preg_replace('/\D/', '', $value) . '"';
+	$output = '<span class="phone_number" data-number="' . (isset($number) ? preg_replace('/\D/', '', $number) : preg_replace('/\D/', '', $value)) . '"';
 	if(isset($display_name)) {
 		$output .= 'data-display-name="' . $display_name . '"';
 	}
