@@ -211,7 +211,7 @@ Html::macro('phone_number', function ($value, $number = NULL, $display_name = NU
 	if(!isset($number)) {
 		$number = $value;
 	}
-	$number = preg_replace('/+/', '00', $number);
+	$number = preg_replace('/\+/', '00', $number);
 	$number = preg_replace('/\D/', '', $number);
 
 	$output = '<span class="phone_number" data-number="' . $number . '"';
