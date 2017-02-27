@@ -1,6 +1,6 @@
 {
 	"name": "lucasvdh/laravelmacros",
-	"version": "5.0",
+	"version": "5.3",
 	"license": "MIT",
 	"description": "A useful set of HTML and Form macros with css and js made for bootstrap",
 	"keywords": ["laravel", "set", "macro", "macros", "html", "form", "styling", "css", "javascript", "js"],
@@ -14,8 +14,8 @@
 	}],
 	"require": {
 		"php": ">=5.3.0",
-		"laravel/framework": "5.*",
-		"laravelcollective/html": "5.*"
+		"laravel/framework": "5.3.*",
+		"laravelcollective/html": "^5.3.0"
 	},
 	"autoload": {
 		"psr-4": {
