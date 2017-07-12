@@ -1,19 +1,22 @@
 <?php
 
-function is_class_method($type = "public", $method, $class)
-{
-	// $type = mb_strtolower($type);
-	$refl = new ReflectionMethod($class, $method);
-	switch ($type) {
-		case "static":
-			return $refl->isStatic();
-			break;
-		case "public":
-			return $refl->isPublic();
-			break;
-		case "private":
-			return $refl->isPrivate();
-			break;
+
+if (!function_exists('is_class_method')) {
+	function is_class_method($type = "public", $method, $class)
+	{
+		// $type = mb_strtolower($type);
+		$refl = new ReflectionMethod($class, $method);
+		switch ($type) {
+			case "static":
+				return $refl->isStatic();
+				break;
+			case "public":
+				return $refl->isPublic();
+				break;
+			case "private":
+				return $refl->isPrivate();
+				break;
+		}
 	}
 }
 
